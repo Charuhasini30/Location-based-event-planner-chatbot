@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+google-generativeai
+pinecone
+sentence-transformers
+python-dotenv
+requests

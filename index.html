@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Genie Chatbot</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Event Genie Chatbot</h2>
+
+ 
+    <div class="d-flex justify-content-end gap-2 mb-3">
+      <button class="btn btn-sm btn-outline-danger" title="Clear Chat" onclick="clearChat()">🧹</button>
+      <button class="btn btn-sm btn-outline-secondary" title="New Chat" onclick="startNewChat()">🆕</button>
+    </div>
+
+  
+    <button class="btn btn-outline-info btn-sm mb-2" onclick="toggleHistorySidebar()">📜 View History</button>
+
+  
+    <div class="mb-3">
+      <input id="locationInput" class="form-control" placeholder="Enter your city (e.g., Bangalore)" />
+    </div>
+
+ 
+    <div class="chat-box border rounded p-3 mb-3 bg-white" style="height: 400px; overflow-y: scroll;" id="chatBox"></div>
+
+  
+    <div class="input-group">
+      <input id="messageInput" class="form-control" placeholder="Ask me about events..." />
+      <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+    </div>
+
+    
+    <div class="d-flex justify-content-end mt-3 gap-2">
+      <button class="btn btn-secondary btn-sm" onclick="toggleDarkMode()">🌓</button>
+      <button class="btn btn-outline-secondary btn-sm" onclick="startVoiceInput()">🎙️</button>
+    </div>
+  </div>
+
+  
+  <div id="historySidebar" class="position-fixed top-0 end-0 bg-white border-start shadow p-3"
+       style="width: 250px; height: 100%; overflow-y: auto; display: none; z-index: 1050;">
+    <h5>🕘 Chat History</h5>
+    <div id="chatHistorySidebar"></div>
+    <button class="btn btn-sm btn-danger mt-3" onclick="startNewChat()">🧹 New Chat</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
